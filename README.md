@@ -1,6 +1,6 @@
 # Dublet
 
-A mini link shortener built with the Dub.co [TypeScript SDK](https://www.npmjs.com/package/dub)https://www.npmjs.com/package/dub.
+A mini link shortener built with the Dub.co [TypeScript SDK](https://www.npmjs.com/package/dub).
 
 ## Demo
 
