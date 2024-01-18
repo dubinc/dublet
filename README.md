@@ -4,7 +4,7 @@ A mini link shortener built with the Dub.co [TypeScript SDK](https://www.npmjs.c
 
 ## Demo
 
-https://github.com/dubinc/dublet/assets/28986134/23b426a3-e1bf-4e49-8e42-799aa02d3055
+https://github.com/dubinc/dublet/assets/28986134/5708c1fb-a7f2-4b4c-a1aa-23e18c8a531e
 
 ## Stack
 
