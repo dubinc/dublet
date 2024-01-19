@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  CardTitle,
-  CardDescription,
-  CardHeader,
-  CardContent,
-  Card,
-} from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -22,7 +16,7 @@ export default function CardForm() {
   const [state, formAction] = useFormState(shorten, initialState);
 
   return (
-    <CardContent>
+    <CardContent className="bg-gray-50 border-t border-gray-200">
       <form className="space-y-4" action={formAction}>
         <div className="space-y-2">
           <Label htmlFor="url">URL</Label>
@@ -37,7 +31,7 @@ export default function CardForm() {
         <SubmitButton />
       </form>
       {state.shortLink && (
-        <div className="mt-4 p-4 border border-gray-200 dark:border-gray-700 rounded">
+        <div className="mt-4 p-4 border border-gray-200 bg-white dark:border-gray-700 rounded">
           <p className="text-blue-500 dark:text-blue-400 text-center">
             <Link href={state.shortLink}>
               {state.shortLink.replace(/^https?:\/\//, "")}

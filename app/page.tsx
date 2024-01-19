@@ -13,11 +13,19 @@ import CardForm from "@/components/form";
 export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-900">
-      <Card className="w-full max-w-md">
+      <Card className="w-full max-w-md overflow-hidden">
         <CardHeader className="space-y-1">
-          <CardTitle className="text-2xl font-bold">Link Shortener</CardTitle>
+          <CardTitle className="text-2xl font-bold">Dublet</CardTitle>
           <CardDescription>
-            Enter your URL below to generate a short link
+            A mini link shortener built with the Dub.co{" "}
+            <a
+              href="https://dub.sh/sdk"
+              target="_blank"
+              className="text-blue-500 hover:underline"
+            >
+              TypeScript SDK
+            </a>
+            .
           </CardDescription>
         </CardHeader>
         <CardForm />
