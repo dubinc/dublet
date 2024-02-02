@@ -21,8 +21,8 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0
   dub:
-    specifier: ^0.3.0
-    version: 0.3.0
+    specifier: ^0.6.0
+    version: 0.6.0
   lucide-react:
     specifier: ^0.312.0
     version: 0.312.0(react@18.2.0)
@@ -944,8 +944,8 @@ packages:
       esutils: 2.0.3
     dev: true
 
-  /dub@0.3.0:
-    resolution: {integrity: sha512-wxawz54F7rYVfTPe0OBx5MmOZun99r2eqKqktoT/4YUnfoEONZHUJEfrHMirRuuV42jyOuMUVvqL6N1VqCdQgg==}
+  /dub@0.6.0:
+    resolution: {integrity: sha512-ku+JfFXSkKhmy1f25rZOOsr/qgiJyG62XedpXqAcMnoYsyEJ0MXv/pvggYcxxfshIL3O5z0JZlGkDgmGtE+45Q==}
     dependencies:
       '@types/node': 18.19.8
       '@types/node-fetch': 2.6.11

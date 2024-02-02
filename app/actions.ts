@@ -13,9 +13,9 @@ export async function shorten(_prevState: any, formData: FormData) {
       shortLink: "Invalid URL",
     };
   }
-  const response = await dub.links.create({ domain: "dub.sh", url });
+  const { shortLink } = await dub.links.create({ domain: "dub.sh", url });
 
   return {
-    shortLink: `https://${response.domain}/${response.key}`,
+    shortLink,
   };
 }
