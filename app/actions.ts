@@ -13,7 +13,10 @@ export async function shorten(_prevState: any, formData: FormData) {
       shortLink: "Invalid URL",
     };
   }
-  const { shortLink } = await dub.links.create({ domain: "dub.sh", url });
+  const { shortLink } = await dub.links.create({
+    url,
+    prefix: "/c/", // optional – generated keys will be in the /c/:key format
+  });
 
   return {
     shortLink,
