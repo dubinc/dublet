@@ -14,7 +14,7 @@ export async function shorten(_prevState: any, formData: FormData) {
     };
   }
   const { shortLink } = await dub.links.create({
-    domain: "go.acme.com", // optional param – if not set the primary domain will be used
+    domain: "dub.sh", // optional param – if not set the primary domain will be used
     key: "my-key", // optional – if not set, a random 7-char key will be generated
     url, // required – the URL to shorten
     prefix: "/c/", // optional – if set, generated keys will be in the /c/:key format
