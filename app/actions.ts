@@ -18,6 +18,9 @@ export async function shorten(_prevState: any, formData: FormData) {
     url, // required – the URL to shorten
     prefix: "/c/", // optional – if set, generated keys will be in the /c/:key format
     tagIds: ["clsy3dq5y000ukc4qw9wg96yj"], // optional – tags to associate with the link
+    geo: {
+      us: "usa.com", // optional – the URL to redirect to if the user is in the US (geo-targeting)
+    },
   });
 
   return {
