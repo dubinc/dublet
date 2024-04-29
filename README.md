@@ -2,7 +2,23 @@
 
 A mini link shortener built with the Dub.co [TypeScript SDK](https://www.npmjs.com/package/dub).
 
-![image](https://github.com/dubinc/dublet/assets/28986134/8f7c9680-9f0a-4106-a574-94b503ea38d3)
+```typescript
+import { Dub } from "dub";
+
+const dub = new Dub({
+    token: process.env.DUB_API_KEY
+    workspaceId: "ws_xxxxxxxxxxxx",
+});
+
+async function shorten() {
+    const result = await dub.links.create({
+        url: "https://google/com",
+    });
+
+    // Handle the result
+    console.log(result);
+}
+```
 
 ## Demo
 
