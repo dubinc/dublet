@@ -16,11 +16,8 @@ export async function shorten(_prevState: any, formData: FormData) {
   const { shortLink } = await dub.links.create({
     domain: "dub.sh", // optional param – if not set the primary domain will be used
     url, // required – the URL to shorten
-    prefix: "/c/", // optional – if set, generated keys will be in the /c/:key format
-    tagIds: ["clsy3dq5y000ukc4qw9wg96yj"], // optional – tags to associate with the link
-    geo: {
-      us: "usa.com", // optional – the URL to redirect to if the user is in the US (geo-targeting)
-    },
+    tagNames: ["random tag"], // optional param – the tags to associate with the link (can also be tagIds)
+    externalId: "ext_x12345678", // optional param – the unique ID of the link in your database
   });
 
   return {
