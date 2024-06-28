@@ -6,17 +6,16 @@ A mini link shortener built with the Dub.co [TypeScript SDK](https://www.npmjs.c
 import { Dub } from "dub";
 
 const dub = new Dub({
-    token: process.env.DUB_API_KEY
-    workspaceId: "ws_xxxxxxxxxxxx",
+  token: process.env.DUB_API_KEY, // optional: defaults to the `DUB_API_KEY` environment variable
 });
 
 async function shorten() {
-    const result = await dub.links.create({
-        url: "https://google/com",
-    });
+  const result = await dub.links.create({
+    url: "https://google/com",
+  });
 
-    // Handle the result
-    console.log(result);
+  // Handle the result
+  console.log(result);
 }
 ```
 
