@@ -15,7 +15,7 @@ export async function shorten(_prevState: any, formData: FormData) {
     domain: "dub.sh", // optional param – if not set the primary domain will be used
     url, // required – the URL to shorten
     tagNames: ["random tag"], // optional param – the tags to associate with the link (can also be tagIds)
-    externalId: "ext_x12345677", // optional param – the unique ID of the link in your database
+    // externalId: "ext_x12345677", // optional param – the unique ID of the link in your database
   });
 
   return {
