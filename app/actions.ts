@@ -1,8 +1,6 @@
 "use server";
 
-import { Dub } from "dub";
-
-const dub = new Dub();
+import { dub } from "@/lib/dub";
 
 export async function shorten(_prevState: any, formData: FormData) {
   const url = formData.get("url");
