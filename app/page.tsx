@@ -17,13 +17,22 @@ export default function Page() {
         <CardHeader className="space-y-1">
           <CardTitle className="text-2xl font-bold">Dublet</CardTitle>
           <CardDescription>
-            A mini link shortener built with the Dub.co{" "}
+            A mini link shortener built with the{" "}
             <a
-              href="https://dub.sh/sdk"
+              href="https://d.to/typescript"
               target="_blank"
               className="text-blue-500 hover:underline"
             >
-              TypeScript SDK
+              Dub TypeScript SDK
+            </a>
+            .<br />
+            View the source code on{" "}
+            <a
+              href="https://git.new/dublet"
+              target="_blank"
+              className="text-blue-500 hover:underline"
+            >
+              GitHub
             </a>
             .
           </CardDescription>

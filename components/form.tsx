@@ -7,13 +7,22 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { useFormState, useFormStatus } from "react-dom";
 import { shorten } from "@/app/actions";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 const initialState = {
   shortLink: "",
+  error: undefined,
 };
 
 export default function CardForm() {
   const [state, formAction] = useFormState(shorten, initialState);
+
+  useEffect(() => {
+    if (state.error) {
+      toast.error(state.error);
+    }
+  }, [state.error]);
 
   return (
     <CardContent className="bg-gray-50 border-t border-gray-200">
@@ -23,9 +32,9 @@ export default function CardForm() {
           <Input
             id="url"
             name="url"
-            placeholder="https://example.com"
+            placeholder="example.com"
             required
-            type="url"
+            type="text"
           />
         </div>
         <SubmitButton />
@@ -33,7 +42,7 @@ export default function CardForm() {
       {state.shortLink && (
         <div className="mt-4 p-4 border border-gray-200 bg-white dark:border-gray-700 rounded">
           <p className="text-blue-500 dark:text-blue-400 text-center">
-            <Link href={state.shortLink}>
+            <Link href={state.shortLink} target="_blank">
               {state.shortLink.replace(/^https?:\/\//, "")}
             </Link>
           </p>
